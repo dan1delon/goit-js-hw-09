@@ -1,3 +1,6 @@
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
+
 const images = [
   {
     preview:
@@ -65,7 +68,7 @@ const images = [
 ];
 
 const gallery = document.querySelector('.gallery');
-let fragment = [];
+const fragment = [];
 
 images.forEach(({ preview, original, description }) => {
 
@@ -84,10 +87,6 @@ images.forEach(({ preview, original, description }) => {
 });
 
 gallery.append(...fragment);
-
-import SimpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
-
 
 const lightbox = new SimpleLightbox('.gallery a', {
     captionsData: 'alt',
